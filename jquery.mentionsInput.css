@@ -2,12 +2,14 @@
 .mentions-input-box {
   position: relative;
   background: #fff;
+  height: auto;
 }
 
 .mentions-input-box textarea {
   width: 100%;
+  font-size: 14px;
   display: block;
-  height: 18px;
+  height: 80px;
   padding: 9px;
   border: 1px solid #dcdcdc;
   border-radius:3px;
@@ -22,14 +24,15 @@
           box-sizing: border-box;
 }
 
-.mentions-input-box .mentions-autocomplete-list {
+.mentions-autocomplete-list {
   display: none;
   background: #fff;
   border: 1px solid #b2b2b2;
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 1000000000000000000;
+  min-width: 500px;
   margin-top: -2px;
 
   border-radius:5px;
@@ -41,12 +44,12 @@
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.148438);
 }
 
-.mentions-input-box .mentions-autocomplete-list ul {
+.mentions-autocomplete-list ul {
     margin: 0;
     padding: 0;
 }
 
-.mentions-input-box .mentions-autocomplete-list li {
+.mentions-autocomplete-list li {
   background-color: #fff;
   padding: 0 5px;
   margin: 0;
@@ -60,12 +63,12 @@
   white-space: nowrap;
 }
 
-.mentions-input-box .mentions-autocomplete-list li:last-child {
+.mentions-autocomplete-list li:last-child {
   border-radius:5px;
 }
 
-.mentions-input-box .mentions-autocomplete-list li > img,
-.mentions-input-box .mentions-autocomplete-list li > div.icon {
+.mentions-autocomplete-list li > img,
+.mentions-autocomplete-list li > div.icon {
   width: 16px;
   height: 16px;
   float: left;
@@ -76,17 +79,17 @@
   border-radius:3px;
 }
 
-.mentions-input-box .mentions-autocomplete-list li em {
+.mentions-autocomplete-list li em {
   font-weight: bold;
   font-style: none;
 }
 
-.mentions-input-box .mentions-autocomplete-list li:hover,
-.mentions-input-box .mentions-autocomplete-list li.active {
+.mentions-autocomplete-list li:hover,
+.mentions-autocomplete-list li.active {
   background-color: #f2f2f2;
 }
 
-.mentions-input-box .mentions-autocomplete-list li b {
+.mentions-autocomplete-list li b {
   background: #ffff99;
   font-weight: normal;
 }

@@ -106,7 +106,15 @@
 
     function initAutocomplete() {
       elmAutocompleteList = $(settings.templates.autocompleteList());
-      elmAutocompleteList.appendTo(elmWrapperBox);
+      var pos = _.extend({}, elmWrapperBox.offset(), {
+        height: elmWrapperBox.height()
+      })
+      elmAutocompleteList.css({
+        top: pos.top + pos.height,
+        left: pos.left,
+        width: elmWrapperBox.width()
+      });
+      elmAutocompleteList.appendTo("body");
       elmAutocompleteList.delegate('li', 'mousedown', onAutoCompleteItemClick);
     }
 
